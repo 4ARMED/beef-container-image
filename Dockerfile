@@ -27,5 +27,6 @@ WORKDIR /app
 RUN git clone https://github.com/beefproject/beef.git
 WORKDIR /app/beef
 RUN bundle install --without test development
+RUN openssl req -new -newkey rsa:3072 -sha256 -x509 -days 3650 -nodes -out beef_cert.pem -keyout beef_key.pem -subj "/CN=localhost"
 
 ENTRYPOINT ["./beef"]
