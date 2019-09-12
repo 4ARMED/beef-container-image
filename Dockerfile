@@ -1,4 +1,4 @@
-FROM ruby:2.5-alpine
+FROM ruby:2.6-alpine
 LABEL maintainer="Marc Wickenden <marc@4armed.com>"
 
 RUN apk --update --no-cache add \
