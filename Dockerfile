@@ -1,5 +1,5 @@
 FROM ruby:2.6-alpine
-LABEL maintainer="Marc Wickenden <marc@4armed.com>"
+LABEL maintainer="4ARMED <code@4armed.com>"
 
 RUN apk --update --no-cache add \
 		curl \
