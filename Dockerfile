@@ -24,6 +24,9 @@ RUN apk --update --no-cache add \
 		nodejs
 
 WORKDIR /app
+RUN chown -R 1001:1001 /app
+
+USER 1001
 RUN git clone https://github.com/4armed/beef.git
 WORKDIR /app/beef
 RUN bundle install --without test development
